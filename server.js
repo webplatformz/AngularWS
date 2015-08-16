@@ -1,8 +1,14 @@
 'use strict';
 
-let port = process.env.PORT || 3000;
+var port = process.env.PORT || 3000;
 
-let express = require('express');
-let app = express();
+var express = require('express');
+//var server = require('http').createServer(app);
+var app = express();
 
 app.use(express.static(__dirname + '/app'));
+app.listen(port);
+console.info('Server listening on port:', port);
+/*server.listen(port, () => {
+    console.info('Server listening on port:', server.address().port);
+});*/
