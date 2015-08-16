@@ -1,0 +1,13 @@
+{
+    "name": "AngularWS",
+    "version": "1.0.0",
+    "engines": {
+        "node": "0.12.x"
+    },
+    "scripts": {
+        "test": "./node_modules/grunt-cli/bin/gulp test",
+        "start": "./node_modules/grunt-cli/bin/gulp build; node ./build/server.js",
+        "live": "./node_modules/grunt-cli/bin/gulp"
+    },
+    "dependencies": {}
+}
