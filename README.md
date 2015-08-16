@@ -6,7 +6,7 @@ Workshop for intermediate angular developer and architects. Workshop is set up w
 TBD
 
 ## Installation
-You only need to have node.js and bower installed. 
+You only need to have node.js installed. 
 
 Installing node.js: 
 
@@ -20,4 +20,9 @@ $ npm install
 Start the server:
 ```sh
 $ npm start
+```
+
+Test the app:
+```sh
+$ npm test
 ```
