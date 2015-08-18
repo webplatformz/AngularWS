@@ -1,6 +1,7 @@
-angular.module('angularws')
-    .controller('injectionController', ['$scope',
-        function ($scope) {
-            $scope.greeting = "Hello World";
+angular.module('angularws.injection')
+    .controller('injectionController', ['$scope', 'injectionService',
+        function ($scope, injectionService) {
+            $scope.greeting = "Hello";
             console.log("init injectionController");
+            $scope.name = injectionService.get();
     }]);
