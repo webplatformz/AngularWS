@@ -24,5 +24,7 @@ $ npm start
 
 Test the app:
 ```sh
-$ npm test
+$ npm test //uses PhantomJS
+$ npm run test_chrome //uses Chrome
+
 ```
