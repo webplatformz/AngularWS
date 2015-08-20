@@ -54,12 +54,8 @@ $ npm start
 
 Test the app:
 ```sh
-<<<<<<< HEAD
 $ npm test //uses PhantomJS
 $ npm run test_chrome //uses Chrome
-
-=======
-$ npm test
 ```
 
 View the app:
