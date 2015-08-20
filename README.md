@@ -15,6 +15,25 @@ The `injectionTest.js` asserts the simple `$scope` variables on the `injectionCo
 
 Have a look at the folder structure as well. Make sure you have understood the setup before we dive into the first challenge.
 
+###Going through the steps
+Make sure you have all branches checked out
+```sh
+$ git fetch
+```
+
+You have now checked out the `master` branch. During the challenge, you will have to check out the single steps as follows:
+
+
+```sh
+$ git checkout challenge1/task
+```
+And if you want to see our solution
+
+```sh
+$ git checkout challenge1/solution
+```
+This applies for all steps 1 to n.
+
 
 ## Installation
 You only need to have node.js installed. 
