@@ -24,11 +24,19 @@
 </head>
 
 <body ng-app="angularws-app">
-    <h1>Workshop</h1>
+    <h1>Angular Workshop - Challenge 1</h1>
     <div ng-controller="injectionController">
-        <div>{{greeting}}. Do you know {{name}}?</div>
-        <div>Do you know when he was first introduced? <span>Show Answer</span><input ng-hide="showAnswer" ng-click="showAnswer=true" type="button" value="Show Answer" /></div>
-        <div ng-if="showAnswer">He was introduced in {{birthDate}} <input type="button" value="Hide Answer" ng-click="showAnswer=false" /></div>
+        <h2>{{greeting}}. Let's start with a simple quiz.</h2>
+        <div>Do you know when {{name}} was first introduced?</div>
+        <input onClick="window.alert('Nope!');" type="button" value="1986" />
+        <input ng-click="showAnswer=true" type="button" value="1995" />
+        <input onClick="window.alert('Nope!');" type="button" value="2002" />
+        <div ng-if="showAnswer">
+            <p>That's correct! The character was introduced in {{year}} which is the release date of the movie "The Usual Suspects".</p>
+            <p>
+                <input type="button" value="Hide Answer" ng-click="showAnswer=false" />
+            </p>
+        </div>
     </div>
 </body>
 

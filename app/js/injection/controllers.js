@@ -1,7 +1,7 @@
 angular.module('injection', [])
     .controller('injectionController', ['$scope', 'injectionService', function ($scope, injectionService) {
-            $scope.greeting = 'Hello';
-            $scope.showAnswer = false;
-            $scope.name = injectionService.get().firstname + ' ' + injectionService.get().lastname;
-            $scope.birthDate = '15.09.1995';            
+        $scope.greeting = 'Hello everybody';
+        $scope.showAnswer = false;
+        $scope.name = injectionService.get().firstname + ' ' + injectionService.get().lastname;
+        $scope.year = '1995';
     }]);
