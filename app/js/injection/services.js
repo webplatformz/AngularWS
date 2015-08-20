@@ -1,4 +1,4 @@
-angular.module('injection', [])
+angular.module('injection')
     .factory('injectionService', function () {
         return {
             get: function () {

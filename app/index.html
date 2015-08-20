@@ -27,8 +27,8 @@
     <h1>Workshop</h1>
     <div ng-controller="injectionController">
         <div>{{greeting}}. Do you know {{name}}?</div>
-        <div>Do you know when he was first introduced? <span>Show Answer</span><input ng-hide="showAnswer" ng-click="showAnswer=true" type="button" value="Show Answer" /></div>
-        <div ng-if="showAnswer">He was introduced in {{birthDate}} <input type="button" value="Hide Answer" ng-click="showAnswer=false" /></div>
+        <div>Do you know when he was first introduced? <span>Show Answer</span><input ng-hide="introduction.showAnswer" ng-click="introduction.showAnswer=true" type="button" value="Show Answer" /></div>
+        <div ng-if="introduction.showAnswer">He was introduced in {{birthDate}} <input type="button" value="Hide Answer" ng-click="introduction.showAnswer=false" /></div>
     </div>
 </body>
 
