@@ -14,8 +14,7 @@ describe('angularws-app', function () {
         }));
         it('should set greeting and name', function () {
             expect(scope.greeting).toBe('Hello');
-            expect(scope.name.firstName).toBe('Keyser');
-            expect(scope.name.lastName).toBe('Soze');
+            expect(scope.name).toBe('Keyser Soze');
         });
     });
 });
