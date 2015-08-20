@@ -1,9 +1,9 @@
 angular.module('injection')
     .controller('injectionController', ['$scope', 'injectionService', function ($scope, injectionService) {
         $scope.introduction = {
-            "greeting" : "Hello",
-            "showAnswer" : false,
-            "name" : injectionService.get().firstname + ' ' + injectionService.get().lastname,
-            "birthDate" : '15.09.1995'
+            "greeting": "Hello everybody",
+            "showAnswer": false,
+            "name": injectionService.get().firstname + ' ' + injectionService.get().lastname,
+            "year": '1995'
         }
     }]);

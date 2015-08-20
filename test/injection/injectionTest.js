@@ -13,12 +13,12 @@ describe('angularws-app', function () {
             });
         }));
         it('should set greeting and name', function () {
-            expect(scope.introduction.greeting).toBe('Hello');
+            expect(scope.introduction.greeting).toBe('Hello everybody');
             expect(scope.introduction.name).toBe('Keyser Söze');
         });
         it('should set birthdate and default setting', function () {
             expect(scope.introduction.showAnswer).toBe(false);
-            expect(scope.introduction.birthDate).toBe('15.09.1995');
+            expect(scope.introduction.year).toBe('1995');
         });
     });
 });
