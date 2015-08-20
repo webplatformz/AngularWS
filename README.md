@@ -11,7 +11,7 @@ The dependencies are as follows:
 
 `angularws-app` -> `injection`
 
-The `injectionTest.js` asserts the simple `$scope` variables on the `injectionController`, make sure it's green! Instructions below.
+The `injectionTest.js` asserts the simple `$scope` variables on the `injectionController`, make sure the nyan cat is happy! Instructions below.
 
 Have a look at the folder structure as well. Make sure you have understood the setup before we dive into the first challenge.
 
