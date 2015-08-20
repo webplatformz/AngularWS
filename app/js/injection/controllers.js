@@ -1,5 +1,5 @@
-angular.module('injection', [])
-    .controller('injectionController', ['$scope', function ($scope) {
+angular.module('injection')
+    .controller('injectionController', ['$scope', 'injectionService', function ($scope, injectionService) {
             $scope.greeting = 'Hello';
-            $scope.name = 'Keyser Soze';
+            $scope.name = injectionService.get().firstname + ' ' + injectionService.get().lastname;
     }]);
