@@ -11,7 +11,7 @@ The dependencies are as follows:
 
 `angularws-app` -> `injection`
 
-The `injectionTest.js` asserts the simple `$scope` variables on the `injectionController`, make sure the nyan cat is happy! Instructions below.
+The `injectionTest.js` asserts the simple `$scope` variables on the `injectionController`, keep the nyan cat happy! Instructions below.
 
 Have a look at the folder structure as well. Make sure you have understood the setup before we dive into the first challenge.
 
@@ -61,5 +61,4 @@ $ npm run test_chrome //uses Chrome
 View the app:
 ```
 http://localhost:3000
->>>>>>> 0720d2667661c27d94ada671eebb670a583a130b
 ```
