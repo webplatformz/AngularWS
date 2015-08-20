@@ -1,22 +1,21 @@
-describe('angularws', function () {
+describe('angularws-app', function () {
     var scope,
         controller;
     beforeEach(function () {
-        module('angularws.injection');
+        module('injection');
     });
     describe('injectionController', function () {
-        beforeEach(inject(function ($rootScope, $controller, injectionService) {
+        beforeEach(inject(function ($rootScope, $controller) {
             scope = $rootScope.$new();
 
             controller = $controller('injectionController', {
-                '$scope': scope,
-                'injectionService': injectionService
+                '$scope': scope
             });
         }));
         it('should set greeting and name', function () {
             expect(scope.greeting).toBe('Hello');
-            expect(scope.name.firstname).toBe('Keyser');
-            expect(scope.name.lastname).toBe('Soze');
+            expect(scope.name.firstName).toBe('Keyser');
+            expect(scope.name.lastName).toBe('Soze');
         });
     });
 });
