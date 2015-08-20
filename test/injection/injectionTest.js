@@ -1,8 +1,8 @@
-describe('angularws', function () {
+describe('angularws-app', function () {
     var scope,
         controller;
     beforeEach(function () {
-        module('angularws.injection');
+        module('injection');
     });
     describe('injectionController', function () {
         beforeEach(inject(function ($rootScope, $controller, injectionService) {
