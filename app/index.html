@@ -27,13 +27,6 @@
         <button id="find" ng-click="find()">Find</button>
         <input ng-model="n" /> primes.
         <table>
-            <tr ng-repeat="prime in primes | orderBy:$index ">
-                <td>{{ "index" | lowercase }}</td>
-                <td>{{ $index + 1 | number:0 | uppercase }}</td>
-                <td>{{ "prime number" | lowercase }}</td>
-                <td>{{ prime | number:0 | uppercase }}</td>
-                <td>is prime? {{ prime | isPrime }}</td>
-            </tr>
         </table>
     </div>
 </body>
