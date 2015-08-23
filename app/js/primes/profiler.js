@@ -13,6 +13,20 @@ function profileScopeMethod() {
     var $timeout = el.injector().get('$timeout');
     var $q = el.injector().get('$q');
 
+    var countWatchers = function () {
+        var elts = document.getElementsByClassName('ng-scope');
+        var watches = [];
+        var visited_ids = {};
+        for (var i = 0; i < elts.length; i++) {
+            var scope = angular.element(elts[i]).scope();
+            if (scope.$id in visited_ids)
+                continue;
+            visited_ids[scope.$id] = true;
+            watches.push.apply(watches, scope.$$watchers);
+        }
+        return watches.length;
+    }
+
     scope[methodName] = function () {
         console.profile(name);
         console.time(name);
@@ -28,6 +42,7 @@ function profileScopeMethod() {
                 console.profileEnd();
                 scope[methodName] = fn;
                 console.log('restored', name);
+                console.log('Watchers: ' + countWatchers());
             }, 0);
         });
     };
