@@ -1,28 +1,17 @@
-# Angular Workshop
-Workshop for intermediate angular developer and architects. Workshop is set up with challenges where you have to solve lifelike problems and requirements. Each challenge is designed to have 15min to solve the given task while 5min are reserved for review of the/any solution. We call it a "fifteen to five" workshop.
+# Challange 2
+In this challenge it's all about performance. The page should render thousands of prime number as fast as possible.
 
+### Task 1:
+With the initial setup the rendering of the first 1000 prime numbers takes quite some time. On a normal system it takes about 9 second to calculate and render the first 1000 primes.
 
-###General setup:
-TBD
+Reduce that time as much as you can.
 
-## Installation
-You only need to have node.js installed. 
+#### Profilers:
+We included a simple profile that will help you analyze what is taking time in your app. Check the *Profiles* Tab from the Chrome Dev-Tools.
 
-Installing node.js: 
+#### Hints: 
+Check JavaScript functions; Binding.
 
-See http://nodejs.org/download/
-
-Install node modules:
-```sh
-$ npm install
-```
-
-Start the server:
 ```sh
 $ npm start
-```
-
-Test the app:
-```sh
-$ npm test
 ```
