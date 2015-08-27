@@ -1,4 +1,4 @@
-describe('angularws', function () {
+xdescribe('angularws', function () {
     var scope,
         controller;
     beforeEach(function () {

@@ -1,5 +1,7 @@
 angular.module('angularws.blogpost')
 
-    .directive('blogPost', function() {
-
+    .directive('blogPost', function () {
+        return {
+            restrict: 'AE'
+        }
     });

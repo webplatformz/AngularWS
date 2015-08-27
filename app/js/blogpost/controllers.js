@@ -1,7 +1,18 @@
 angular.module('angularws.blogpost')
-    .controller('injectionController', ['$scope', 'injectionService',
-        function ($scope, injectionService) {
+    .controller('blogPostController', ['$scope',
+        function ($scope) {
+
             $scope.greeting = "Hello";
-            console.log("init injectionController");
-            $scope.name = injectionService.get();
+
+            $scope.blogPosts = [
+                {
+                    title : 'My first post',
+                    content : 'Hello, this is my first post.'
+                },
+                {
+                    title : 'The second post',
+                    content : '<p>Hello!</p><p>This is real HTML!</p>'
+                }
+            ]
+
     }]);
