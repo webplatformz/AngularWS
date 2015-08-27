@@ -11,7 +11,7 @@ angular.module('angularws.blogpost')
                 },
                 {
                     title : 'The second post',
-                    content : '<p>Hello!</p><p>This is real HTML!</p>'
+                    content : '<h2>Hello!</h2><p>This is real HTML!</p>'
                 }
             ]
 
