@@ -1,4 +1,4 @@
-# Challange 1 - Solution
+# Challenge 1 - Solution
 The challenge inherited 2 problems which have to be fixed:
 
 - Multiple module definitions
