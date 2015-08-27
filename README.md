@@ -1,4 +1,4 @@
-# Challange 1
+# Challenge 1
 To get started we've set up a simple case with tests for the controller. Unfortenately the two tests are failing...
 
 ### Task 1:
