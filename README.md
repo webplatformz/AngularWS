@@ -1,4 +1,4 @@
-# Challange 2
+# Challenge 2
 In this challenge it's all about performance. The page should render thousands of prime number as fast as possible.
 
 ### Task 1:
