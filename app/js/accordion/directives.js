@@ -1,4 +1,4 @@
-angular.module('angularws.blogpost')
+angular.module('angularws.accordion')
 
     .directive('accordionItem', function () {
         return {

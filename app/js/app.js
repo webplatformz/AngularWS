@@ -1,3 +1,3 @@
-angular.module('angularws', ['angularws.blogpost']);
+angular.module('angularws', ['angularws.accordion']);
 
-angular.module('angularws.blogpost', []);
+angular.module('angularws.accordion', []);
