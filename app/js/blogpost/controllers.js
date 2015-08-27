@@ -1,4 +1,4 @@
-angular.module('angularws.injection')
+angular.module('angularws.blogpost')
     .controller('injectionController', ['$scope', 'injectionService',
         function ($scope, injectionService) {
             $scope.greeting = "Hello";

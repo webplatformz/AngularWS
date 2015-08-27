@@ -1,3 +1,3 @@
-angular.module('angularws', ['angularws.injection']);
+angular.module('angularws', ['angularws.blogpost']);
 
-angular.module('angularws.injection', []);
+angular.module('angularws.blogpost', []);

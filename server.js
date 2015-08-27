@@ -8,6 +8,9 @@ var app = express();
 
 app.use(express.static(__dirname + '/app'));
 app.listen(port);
+
+
+
 console.info('Server listening on port:', port);
 /*server.listen(port, () => {
     console.info('Server listening on port:', server.address().port);

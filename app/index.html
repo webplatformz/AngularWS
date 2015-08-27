@@ -11,8 +11,8 @@
 
     <!-- our scripts -->
     <script src="js/app.js"></script>
-    <script src="js/injection/services.js"></script>
     <script src="js/injection/controllers.js"></script>
+    <script src="js/injection/directives.js"></script>
 
     <!-- external styles -->
 
@@ -26,12 +26,13 @@
 <body ng-app="angularws">
 
 
-    <!--<script src="js/injection/controllers.js"></script>
-<script src="js/injection/services.js"></script>-->
     <h1>Workshop</h1>
     <div ng-controller="injectionController">
         <div>{{greeting}}. Do you know {{name.firstname}} {{name.lastname}}?</div>
     </div>
+
+    <blog-post title="asdfasdf" content="asdfasdf"></blog-post>
+
 </body>
 
 </html>
