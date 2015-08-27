@@ -8,11 +8,12 @@
 
     <!-- vendor scripts -->
     <script src="js/libs/angular.min.js" type="text/javascript"></script>
+    <script src="js/libs/angular-sanitize.min.js" type="text/javascript"></script>
 
     <!-- our scripts -->
     <script src="js/app.js"></script>
-    <script src="js/injection/controllers.js"></script>
-    <script src="js/injection/directives.js"></script>
+    <script src="js/blogpost/controllers.js"></script>
+    <script src="js/blogpost/directives.js"></script>
 
     <!-- external styles -->
 
@@ -27,12 +28,27 @@
 
 
     <h1>Workshop</h1>
-    <div ng-controller="injectionController">
-        <div>{{greeting}}. Do you know {{name.firstname}} {{name.lastname}}?</div>
+    <div ng-controller="blogPostController">
+        <div class="accordion-list">
+            <div class="accordion-item">
+                <div class="accordion-banner">First Akkordion Item</div>
+                <div class="accordion-content">Here comes some default text</div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-banner">First Akkordion Item</div>
+                <div class="accordion-content">Here comes some fancy stuff with html: <h1>A title</h1></div>
+            </div>
+        </div>
+        
+        
+        <div class="accordion-list">
+            <akkordion-item title="asdfasdf">
+                <h1>My title</h1>
+                <p>My content with html <span>a span</span></p>
+            </akkordion-item>
+        </div>
     </div>
-
-    <blog-post title="asdfasdf" content="asdfasdf"></blog-post>
-
 </body>
 
 </html>
+    
