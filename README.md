@@ -42,6 +42,14 @@ Installing node.js:
 
 See http://nodejs.org/download/
 
+### Windows users (not recommended)
+
+- Install python **version 2.7 NOT 3.x**: http://www.python.org/getit/windows/
+- Install Microsoft Visual Studio C++ 2012 Express version: http://go.microsoft.com/?linkid=9816758
+- Install node-gyp: npm install -g node-gyp
+- Installing node.js http://nodejs.org/download/
+
+
 Install node modules:
 ```sh
 $ npm install
