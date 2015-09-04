@@ -12,23 +12,28 @@ function isPrime(n) {
     return true;
 }
 
+var foundPrimes = [];
+
 function findPrime(n) {
-    var k = 1;
-    var foundPrimes = [];
+    var k;
+    if (foundPrimes.length) {
+        k = foundPrimes[foundPrimes.length - 1] + 1;
+    } else {
+        k = 1;
+    }
     while (foundPrimes.length < n) {
         if (isPrime(k)) {
             foundPrimes.push(k);
-
         }
         k += 1;
     };
-    return foundPrimes[foundPrimes.length - 1];
+    return foundPrimes[n - 1];
 }
 
 angular.module('angularws.primes')
     .controller('primesController', ['$scope',
         function ($scope) {
-            $scope.n = 1000;
+            $scope.n = 10000;
             $scope.find = function () {
                 console.log('computing first', $scope.n, 'primes');
                 $scope.primes = [];
