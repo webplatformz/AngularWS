@@ -1,5 +1,6 @@
 function isPrime(n) {
-    if (isNaN(n) || !isFinite(n) || n % 1 || n < 2) return false;
+    if (isNaN(n) || !isFinite(n) || n % 1 || n < 1) return false;
+    if (n == 1) return true;
     if (n % 2 == 0) return (n == 2);
     if (n % 3 == 0) return (n == 3);
     var m = Math.sqrt(n);
