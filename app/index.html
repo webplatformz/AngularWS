@@ -18,37 +18,36 @@
     <!-- external styles -->
 
     <!-- our styles -->
-    <!--<link href="js/app.css" rel="stylesheet">-->
+    <link href="css/app.css" rel="stylesheet">
 
 
 
 </head>
 
 <body ng-app="angularws">
-
-
     <h1>Workshop</h1>
-    <div ng-controller="accordionController">
-        <div class="accordion-list">
-            <div class="accordion-item">
-                <div class="accordion-banner">First Akkordion Item</div>
-                <div class="accordion-content">Here comes some default text</div>
-            </div>
-            <div class="accordion-item">
-                <div class="accordion-banner">First Akkordion Item</div>
-                <div class="accordion-content">Here comes some fancy stuff with html: <h1>A title</h1></div>
-            </div>
-        </div>
-        
-        
-        <div class="accordion-list">
-            <akkordion-item title="asdfasdf" preopen="true">
-                <h1>a heading</h1>
-                <p>My content with html <span>a span</span></p>
-            </akkordion-item>
-        </div>
+    <div class="container" ng-controller="accordionController">
+        <ul class="accordion">
+            <li class="tabs">
+                <div class="planet-links mercury-icon">
+                    <a href="https://en.wikipedia.org/wiki/Mercury_(planet)">Mercury</a>
+                </div>
+                <div class="paragraph">
+                    <h1>Mercury</h1>
+                    <p>Mercury is the smallest and closest to the Sun of the eight planets in the Solar System.</p>
+                </div>
+            </li>
+            <li class="tabs">
+                <div class="planet-links venus-icon">
+                    <a href="https://en.wikipedia.org/wiki/Venus">Venus</a>
+                </div>
+                <div class="paragraph">
+                    <h1>Venus</h1>
+                    <p>Venus is the second planet from the Sun, orbiting it every 224.7 Earth days. It has no natural satellite.</p>
+                </div>
+            </li>
+        </ul>
     </div>
 </body>
 
 </html>
-    
