@@ -16,44 +16,32 @@
     <script src="js/accordion/directives.js"></script>
 
     <!-- external styles -->
-    <link rel="stylesheet" href='../fonts/typicons.min.css' />
+    <link rel="stylesheet" href='../fonts/typicons.min.css'/>
 
     <!-- our styles -->
     <link href="css/app.css" rel="stylesheet">
 
 
-
 </head>
 
 <body ng-app="angularws">
-    <h1>Workshop</h1>
-    <div class="container" ng-controller="accordionController">
-        <ul class="accordion">
-            <li class="tabs" ng-class="mercuryLock ? 'lock' : ''">
-                <div class=" planet-links mercury-icon ">
-                    <a href="https://en.wikipedia.org/wiki/Mercury_(planet) ">Mercury</a>
-                </div>
-                <div class="paragraph ">
-                    <h1>Mercury <span ng-click="mercuryLock = !mercuryLock" class="typcn" ng-class="mercuryLock ? 'typcn-lock-closed-outline' : 'typcn-lock-open-outline'"></span></h1>
-                    <p>Mercury is the smallest and closest to the Sun of the eight planets in the Solar System.</p>
-                </div>
-            </li>
-            <li class="tabs" ng-class="venusLock ? 'lock' : ''">
-                <div class="planet-links venus-icon ">
-                    <a href="https://en.wikipedia.org/wiki/Venus ">Venus</a>
-                </div>
-                <div class="paragraph">
-                    <h1>Venus <span ng-click="venusLock = !venusLock" class="typcn" ng-class="venusLock ? 'typcn-lock-closed-outline' : 'typcn-lock-open-outline'"></span></h1>
-                    <p>Venus is the second planet from the Sun, orbiting it every 224.7 Earth days. It has no natural satellite.</p>
-                </div>
-            </li>
-        </ul>
-        <div>
-            <accordion-item title="Earth" link="https://en.wikipedia.org/wiki/Earth " symbol-class="earth-icon ">
-                <p>Earth, also called the world, is the third planet from the Sun, the densest planet in the Solar System, the largest of the Solar System's four terrestrial planets, and the only astronomical object known to accommodate life.</p>
-            </accordion-item>
-        </div>
-    </div>
+<h1>Workshop</h1>
+
+<div class="container" ng-controller="accordionController">
+    <ul class="accordion">
+        <planet-accordion-item planet="mercury" link="https://en.wikipedia.org/wiki/Mercury_(planet)">
+            Mercury is the smallest and closest to the Sun of the eight planets in the Solar System.
+        </planet-accordion-item>
+        <planet-accordion-item planet="venus" link="https://en.wikipedia.org/wiki/Venus ">
+            Venus is the second planet from the Sun, orbiting it every 224.7 Earth days. It has no natural satellite.
+        </planet-accordion-item>
+        <planet-accordion-item planet="earth" link="https://en.wikipedia.org/wiki/Earth">
+            Earth, also called the world, is the third planet from the Sun, the densest planet in the Solar System, the
+            largest of the Solar System's four terrestrial planets, and the only astronomical object known to
+            accommodate life.
+        </planet-accordion-item>
+    </ul>
+</div>
 </body>
 
 </html>
