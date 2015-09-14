@@ -47,7 +47,7 @@ function findPrime(n) {
 angular.module('angularws.primes')
     .controller('primesController', ['$scope', '$filter',
         function ($scope, $filter) {
-            $scope.n = 1000;
+            $scope.n = 100000;
             // use AngularJs built-in filter
             var number = $filter('number');
 
