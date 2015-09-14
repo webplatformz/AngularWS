@@ -1,17 +1,26 @@
-# Challange 2
-In this challenge it's all about performance. The page should render thousands of prime number as fast as possible.
+# Challange 2 - Solution
+This challllenge can be managed with a bunch of measures. This readme goes through various improvements and states the progress. In the end theres nothing much left of the initial setup. 
 
-### Task 1:
-With the initial setup the rendering of the first 1000 prime numbers takes quite some time. On a normal system it takes about 9 second to calculate and render the first 1000 primes.
+### Step 1:
+Remove *try/catch* block - As the profiles say's (small yellow warning sign), the *try/catch* cannot be further optimized... so we remove that part.
 
-Reduce that time as much as you can.
+- ``computing primes: 2252.154ms`` -> Time spent on calculating primes
+- ``find:find: 5623.797ms`` -> Overall time between click button and end of rendering.
 
-#### Profilers:
-We included a simple profile that will help you analyze what is taking time in your app. Check the *Profiles* Tab from the Chrome Dev-Tools.
+### Step 2:
+The time spent on calculating the primes is still quite high. Let's replace the prime calculation with a faster algorythm -> http://www.javascripter.net/faq/numberisprime.htm
 
-#### Hints: 
-Check JavaScript functions; Binding.
+- ``computing primes: 12.486ms`` -> Time spent on calculating primes
+- ``find:find: 5613.254ms`` -> Overall time between click button and end of rendering.
 
-```sh
-$ npm start
-```
+### Step 2-1:
+Since we noticeable reduced our calculating time, it's time to increase the amount of prime to 100000 numbers.
+
+- ``computing primes: 190.815ms`` -> Time spent on calculating primes
+- ``find:find: 14700.517ms`` -> Overall time between click button and end of rendering.
+
+### Step 3:
+Now the prime calculation is fine, let's see what we can do about the rendering time. First let's get rid of these many watchers.
+
+- ``computing primes: 12.486ms`` -> Time spent on calculating primes
+- ``find:find: 5613.254ms`` -> Overall time between click button and end of rendering.
