@@ -12,11 +12,10 @@
 
     <!-- our scripts -->
     <script src="js/app.js"></script>
-    <script src="js/accordion/controllers.js"></script>
     <script src="js/accordion/directives.js"></script>
 
     <!-- external styles -->
-    <link rel="stylesheet" href='../fonts/typicons.min.css'/>
+    <link rel="stylesheet" href='../fonts/typicons.min.css' />
 
     <!-- our styles -->
     <link href="css/app.css" rel="stylesheet">
@@ -25,23 +24,24 @@
 </head>
 
 <body ng-app="angularws">
-<h1>Workshop</h1>
+    <h1>Workshop</h1>
 
-<div class="container" ng-controller="accordionController">
-    <ul class="accordion">
-        <planet-accordion-item planet="mercury" link="https://en.wikipedia.org/wiki/Mercury_(planet)">
-            Mercury is the smallest and closest to the Sun of the eight planets in the Solar System.
-        </planet-accordion-item>
-        <planet-accordion-item planet="venus" link="https://en.wikipedia.org/wiki/Venus ">
-            Venus is the second planet from the Sun, orbiting it every 224.7 Earth days. It has no natural satellite.
-        </planet-accordion-item>
-        <planet-accordion-item planet="earth" link="https://en.wikipedia.org/wiki/Earth">
-            Earth, also called the world, is the third planet from the Sun, the densest planet in the Solar System, the
-            largest of the Solar System's four terrestrial planets, and the only astronomical object known to
-            accommodate life.
-        </planet-accordion-item>
-    </ul>
-</div>
+    <div class="container">
+        <ul class="accordion">
+            <accordion-item title="Mercury" icon-class="mercury-icon" link="https://en.wikipedia.org/wiki/Mercury_(planet)">
+                Mercury is the smallest and closest to the Sun of the eight planets in the Solar System.
+            </accordion-item>
+            <accordion-item title="Venus" icon-class="venus-icon" link="https://en.wikipedia.org/wiki/Venus ">
+                Venus is the second planet from the Sun, orbiting it every 224.7 Earth days. It has no natural satellite.
+            </accordion-item>
+            <accordion-item title="Earth" icon-class="earth-icon" link="https://en.wikipedia.org/wiki/Earth">
+                Earth, also called the world, is the third planet from the Sun, the densest planet in the Solar System, the largest of the Solar System's four terrestrial planets, and the only astronomical object known to accommodate life.
+            </accordion-item>
+            <accordion-item title="Mars" icon-class="mars-icon" link="https://en.wikipedia.org/wiki/Mars">
+                Mars is the fourth planet from the Sun and the second smallest planet in the Solar System, after Mercury.
+            </accordion-item>
+        </ul>
+    </div>
 </body>
 
 </html>
