@@ -5,7 +5,7 @@ angular.module('angularws.accordion')
         restrict: 'AE',
         replace: true,
         transclude: true,
-        templateUrl: './partials/accordionitem.html',
+        templateUrl: './partials/accordionItem.html',
         scope: {
             title: '@',
             icon: '@iconClass',
