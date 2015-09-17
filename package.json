@@ -24,6 +24,7 @@
     "karma-cli": "^0.1.0",
     "karma-jasmine": "^0.3.6",
     "karma-nyan-reporter": "^0.2.2",
-    "karma-phantomjs-launcher": "~0.1"
+    "karma-phantomjs-launcher": "~0.1",
+    "protractor": "~2.2.0"
   }
 }
