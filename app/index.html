@@ -8,28 +8,75 @@
 
     <!-- vendor scripts -->
     <script src="js/libs/angular.min.js" type="text/javascript"></script>
+    <script src="js/libs/angular-animate.min.js" type="text/javascript"></script>
+    <script src="js/libs/angular-aria.min.js" type="text/javascript"></script>
+    <script src="js/libs/angular-material.min.js" type="text/javascript"></script>
+
+
 
     <!-- our scripts -->
     <script src="js/app.js"></script>
-    <script src="js/injection/controllers.js"></script>
+    <script src="js/location/controllers.js"></script>
+    <script src="js/location/services.js"></script>
 
     <!-- external styles -->
-
-    <!-- our styles -->
-    <!--<link href="js/app.css" rel="stylesheet">-->
-
-
+    <link href="css/angular-material.min.css" rel="stylesheet">
 
 </head>
 
 <body ng-app="angularws-app">
+    <div ng-controller="locationController">
+        <md-toolbar layout="row">
+            <h1 class="md-toolbar-tools">Angular Workshop - Domain Search</h1>
+        </md-toolbar>
+        <md-content layout-padding>
+            <div layout=row>
+                <h2>Location Finder</h1>
+            </div>
+            <div layout="row" layout-wrap>
+                <div flex="20">
+                    <form name="locationForm">
+                        <div layout="column">
+                            <md-input-container>
+                                <label>URL like www.sbb.ch</label>
+                                <input md-maxlength="40" required name="URL" ng-model="location.url">
 
+                            </md-input-container>
+                            <div layout="column" layout-align="end end">
+                                <md-button class="md-raised md-primary right" ng-click="findLocation()">Find</md-button>
+                            </div>
+                        </div>
+                    </form>
 
-    <!--<script src="js/injection/controllers.js"></script>
-<script src="js/injection/services.js"></script>-->
-    <h1>Workshop</h1>
-    <div ng-controller="injectionController">
-        <div>{{greeting}}. Do you know {{name.firstname}} {{name.lastname}}?</div>
+                </div>
+                <div flex="5">
+                </div>
+                <div flex="66">
+                    <div layout="column">
+                        <md-input-container>
+                            <label>IP (v4)</label>
+                            <input ReadOnly="true" ng-model="location.geo.query">
+                        </md-input-container>
+                        <md-input-container>
+                            <label>Country</label>
+                            <input ReadOnly="true" ng-model="location.geo.country">
+                        </md-input-container>
+                        <md-input-container>
+                            <label>City</label>
+                            <input ReadOnly="true" ng-model="location.geo.city">
+                        </md-input-container>
+                        <md-input-container>
+                            <label>Country</label>
+                            <input ReadOnly="true" ng-model="location.geo.countryCode">
+                        </md-input-container>
+                        <md-input-container>
+                            <label>Name Server</label>
+                            <input ReadOnly="true" ng-model="location.authority.rdata">
+                        </md-input-container>
+                    </div>
+                </div>
+            </div>
+        </md-content>
     </div>
 </body>
 
