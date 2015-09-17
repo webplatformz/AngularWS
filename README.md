@@ -1,12 +1,22 @@
 # Challenge 1
-To get started we've set up a simple case with tests for the controller. Unfortunately the two tests are failing...
+To get started we've set up a simple case with tests for the controller. Unfortunately the tests are failing...
 
 ### Task 1
-Fix the test and make the cat happy. Check if everything works as intended (is it possible to hide the answer?).
+Fix the unit tests and make the cat happy. 
 
 ```sh
 $ npm test
 ```
 
+### Task 2
+This one is a bit more tricky. Now you've fixed the unit tests and the code seems to be working fine, but the webtest is failing! Can you see the problem?
+
+```sh
+$ npm webtest
+```
+
+
+
 #### Hints
-Know the difference between defining and extending a module; Directives and scope inheritance;
+- Difference between defining and extending a module 
+- Scope inheritance (ng-if)
