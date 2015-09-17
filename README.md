@@ -1,28 +1,22 @@
-# Angular Workshop
-Workshop for intermediate angular developer and architects. Workshop is set up with challenges where you have to solve lifelike problems and requirements. Each challenge is designed to have 15min to solve the given task while 5min are reserved for review of the/any solution. We call it a "fifteen to five" workshop.
+# Challenge 3
+
+We want to create a page with some accordions containing information about the planets in our solar system.
+
+Take a look at the HTML & open the page in your browser.
 
 
-###General setup:
-TBD
 
-## Installation
-You only need to have node.js installed. 
+###Task:
 
-Installing node.js: 
+So everyone is happy with the two accordions, and because they look so cool, everyone wants more of them!
 
-See http://nodejs.org/download/
+We can already see that there is quite a lot of duplicated HTML for the accordions. At the bottom of the index.html you
+can see an idea about how the accordion items could be put inside a directive. Of course you can do it any other way
+you prefer, as long as we don't need to duplicate code!
 
-Install node modules:
-```sh
-$ npm install
-```
 
-Start the server:
-```sh
-$ npm start
-```
+## Hints
+The directive we propose requires ```ng-transclude```. If you have never heard of this, try a different solution that
+is more familiar to you or have a look at [this example].
 
-Test the app:
-```sh
-$ npm test
-```
+[this explanation]: http://stackoverflow.com/questions/24725399/what-is-ng-transclude
