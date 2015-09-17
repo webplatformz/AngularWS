@@ -1,11 +1,11 @@
 # Challenge 1 - Solution
-The challenge inherited 2 problems which have to be fixed:
+The challenge contained 2 problems:
 
-- Multiple module definitions
+- Multiple module definitions which caused one module to be overwritten
 - The "DOT" problem
 
 ###Step 1 - Module Definition:
-When defining a module, you only can have one definition with dependencies:
+When defining a module, you only can have one definition with dependencies ([] brackets):
 
 ```javascript
 angular.module('injection', []) // Define once
@@ -24,12 +24,30 @@ angular.module('injection')
 ```
 
 ###Step 2 - The DOT Problem:
-Even if both test pass, the app wasn't working correctly. When you tried to hide the answer, it didn't work.
+As the webtest uncovered, hiding the answer didn't work.
 
-We used a ``ng-if`` to hide/show the answer. This is a simple directive from angular. And as every directive does, it has it's own scope inherited from his parent. When using javascript primitives (string, number, boolean, undefined and null), those values are *copied* to the child scope. So changing the value in the inner element has no impact on the parent variable. 
+We used ``ng-if``, a simple angular directive, to hide/show the answer. ng-if, among other directives, creates its own child scope - this becomes a problem once you try to make use of **{{ two way binding }} to primitives**, in thise case a boolean.
+"Child scope" means the child scope **prototypically inherits** from the parent scope. The boolean ``showAnswer`` is set on the child scope once we click the "Hide Answer" button in our ng-click through ``showAnswer = false``, thus shadowing the parent's own property ``showAnswer``.
 
-This is actually a ``javascripts prototypal inheritance`` problem caused by angulars scoping mechanism.
+Fortunately, the solution is quite simple. Get accustomed to using objects instead of primitives in your controllers and access the data with the dot ``foo.bar``.
 
-Not using primitives when you want 2-way binding will solve the problem. So get accustomed to use objects (and access variables by the ``.``) more often.
+Other standard directives that create child scopes:
+
+- ng-repeat
+- ng-switch
+- ng-view
+- ng-include
+
+This problem obviously also arises when you create your own directives that create their own child scope.
+
+If you don't quite grasp the concept yet, here are some very useful links which go into more detail about this problem:
+
+- [Egghead Video]
+- [Understanding Scopes]
+
+
+[Egghead Video]: https://egghead.io/lessons/angularjs-the-dot
+[Understanding Scopes]: https://github.com/angular/angular.js/wiki/Understanding-Scopes#javascript-prototypal-inheritance
+
 
 
