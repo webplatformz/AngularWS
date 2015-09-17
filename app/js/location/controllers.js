@@ -20,7 +20,7 @@ angular.module('location')
 
         }
 
-        $scope.findLocation = function () {
+        $scope.findLocation_old = function () {
             if (checkURL($scope.location.url)) {
                 locationService.getIPLocation($scope.location.url).then(function (geoResponse) {
                     var geoData = geoResponse.data;
@@ -30,6 +30,18 @@ angular.module('location')
                         $scope.location.authority = authorityData;
                     }, null)
                 }, function (response) {});
+            }
+        }
+
+        $scope.findLocation = function () {
+            if (checkURL($scope.location.url)) {
+                locationService.getIPLocation($scope.location.url, function (geoResponse) {
+                    var geoData = geoResponse;
+                    locationService.getNS($scope.location.url, function (nsResponse) {
+                        $scope.location.geo = geoData;
+                        $scope.location.authority = nsResponse;
+                    });
+                });
             }
         }
 }]);
