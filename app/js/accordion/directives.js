@@ -16,7 +16,6 @@ angular.module('angularws.accordion')
             scope.togglePlanetLock = function () {
                 scope.lock = !scope.lock;
             };
-
         }
     }
 });
