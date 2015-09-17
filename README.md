@@ -17,6 +17,6 @@ you prefer, as long as we don't need to duplicate code!
 
 ## Hints
 The directive we propose requires ```ng-transclude```. If you have never heard of this, try a different solution that
-is more familiar to you or have a look at [this example].
+is more familiar to you or have a look at [this explanation].
 
 [this explanation]: http://stackoverflow.com/questions/24725399/what-is-ng-transclude
