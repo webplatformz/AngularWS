@@ -1,8 +1,7 @@
 angular.module('angularws')
 
-    .controller('mainController', function ($scope, $window) {
+    .controller('mainController', function ($scope) {
 
-            $scope.like = function(planet) {
-                $window.alert('So, you like ' + planet + '. Interesting...');
-            };
+        $scope.name = 'Harry Potter';
+
     });

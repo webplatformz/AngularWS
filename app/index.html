@@ -27,24 +27,19 @@
 <body ng-app="angularws" ng-controller="mainController">
     <h1>Workshop</h1>
 
-    <div class="container">
-        <ul class="accordion">
-            <accordion-item title="Mercury" icon-class="mercury-icon" link="https://en.wikipedia.org/wiki/Mercury_(planet)">
-                <p>Mercury is the smallest and closest to the Sun of the eight planets in the Solar System.</p>
-                <p>Do you like this planet? <input type="button" value="Yes!" ng-click="like('Mercury')"/></p>
-            </accordion-item>
-            <accordion-item title="Venus" icon-class="venus-icon" link="https://en.wikipedia.org/wiki/Venus ">
-                Venus is the second planet from the Sun, orbiting it every 224.7 Earth days. It has no natural satellite.
-            </accordion-item>
-            <accordion-item title="Earth" icon-class="earth-icon" link="https://en.wikipedia.org/wiki/Earth">
-                Earth, also called the world, is the third planet from the Sun, the densest planet in the Solar System, the largest of the Solar System's four terrestrial planets, and the only astronomical object known to accommodate life.
-            </accordion-item>
-            <accordion-item title="Mars" icon-class="mars-icon" link="https://en.wikipedia.org/wiki/Mars">
-                Mars is the fourth planet from the Sun and the second smallest planet in the Solar System, after Mercury.
-            </accordion-item>
-        </ul>
+    <h2>Name in parent scope: {{ name }}</h2>
 
-    </div>
+    <h3>Directive one:</h3>
+    <name-input-one></name-input-one>
+
+    <h3>Directive two:</h3>
+    <name-input-two></name-input-two>
+
+    <h3>Directive three:</h3>
+    <name-input-three name="name"></name-input-three>
+
+    <h3>Directive four:</h3>
+    <name-input-four name="name"></name-input-four>
 
 </body>
 
