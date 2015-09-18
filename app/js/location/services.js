@@ -1,21 +1,31 @@
 angular.module('location')
-    .factory('locationService', ['$http', '$timeout', function ($http, $timeout) {
+    .factory('locationService', ['$q', '$http', '$timeout', function ($q, $http, $timeout) {
         return {
-            getIPLocation: function (url, success) {
-                $http.get('http://ip-api.com/json/' + url).success(function (response) {
-                    $timeout(function () {
-                        success(response);
-                    }, 2000);
-
-                });
-
+            getIPLocation: function (url) {
+                return $http.get('http://ip-api.com/json/' + url);
             },
             getNS: function (url, success) {
-                $http.get('http://api.statdns.com/' + url + '/a').success(function (response) {
-                    $timeout(function () {
-                        success(response.authority[0]);
-                    }, 2000);
+                return $http.get('http://api.statdns.com/' + url + '/a');
+            },
+            checkSyntax: function (url) {
+                var deferred = $q.defer();
+                var domainRegex = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
+                var regex = new RegExp(domainRegex);
 
+                if (url.match(regex)) {
+                    deferred.resolve();
+                } else {
+                    deferred.reject();
+                }
+                return deferred.promise;
+            },
+            checkAndLoadLocation: function (locationObject, url) {
+                var that = this;
+                var tempLocation = {};
+                return that.checkSyntax(url).then(function (isValidUrl) {
+                    return $q.all([
+                        that.getIPLocation(url), that.getNS(url)
+                    ])
                 });
             }
         }

@@ -3,8 +3,7 @@ angular.module('location')
         $scope.domainRegex = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
         $scope.processing = false;
         $scope.location = {
-            url: '',
-            geo: {}
+            url: ''
         };
 
         function checkURL(urlToTest) {
@@ -17,16 +16,14 @@ angular.module('location')
         }
 
         $scope.findLocation = function () {
-            if (checkURL($scope.location.url)) {
-                $scope.processing = true;
-                locationService.getIPLocation($scope.location.url, function (geoResponse) {
-                    var geoData = geoResponse;
-                    locationService.getNS($scope.location.url, function (nsResponse) {
-                        $scope.location.geo = geoData;
-                        $scope.location.authority = nsResponse;
-                        $scope.processing = false;
-                    });
-                });
-            }
-        }
+            $scope.processing = true;
+            locationService.checkAndLoadLocation($scope.location, $scope.location.url, $scope.processing).then(function (data) {
+                $scope.location.geo = data[0].data;
+                $scope.location.authority = data[1].data.authority[0];
+                $scope.processing = false;
+            }, function () {
+                console.log('ERROR');
+                $scope.processing = false;
+            });
+        };
 }]);
