@@ -1,10 +1,7 @@
 angular.module('location')
     .factory('locationService', ['$http', '$timeout', function ($http, $timeout) {
         return {
-            getIPLocation: function (url) {
-                return $http.get('http://ip-api.com/json/' + url);
-            },
-            getIPLocation2: function (url, success) {
+            getIPLocation: function (url, success) {
                 $http.get('http://ip-api.com/json/' + url).success(function (response) {
                     $timeout(function () {
                         success(response);
@@ -13,10 +10,7 @@ angular.module('location')
                 });
 
             },
-            getNS: function (url) {
-                return $http.get('http://api.statdns.com/' + url + '/a');
-            },
-            getNS2: function (url, success) {
+            getNS: function (url, success) {
                 $http.get('http://api.statdns.com/' + url + '/a').success(function (response) {
                     $timeout(function () {
                         success(response.authority[0]);

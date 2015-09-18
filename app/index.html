@@ -22,6 +22,9 @@
     <!-- external styles -->
     <link href="css/angular-material.min.css" rel="stylesheet">
 
+    <!-- our styles -->
+    <link href="css/location.css" rel="stylesheet">
+
 </head>
 
 <body ng-app="angularws-app">
@@ -43,8 +46,9 @@
 
                             </md-input-container>
                             <div layout="column" layout-align="end end">
-                                <md-button class="md-raised md-primary right" ng-click="findLocation()">Find</md-button>
+                                <md-button ng-disabled="processing" class="md-raised md-primary right" ng-click="findLocation()">Find</md-button>
                             </div>
+                            
                         </div>
                     </form>
 
@@ -52,7 +56,7 @@
                 <div flex="5">
                 </div>
                 <div flex="66">
-                    <div layout="column">
+                    <div layout="column" class="location-details" ng-class="{ 'in-process': processing }">
                         <md-input-container>
                             <label>IP (v4)</label>
                             <input ReadOnly="true" ng-model="location.geo.query">
@@ -73,6 +77,9 @@
                             <label>Name Server</label>
                             <input ReadOnly="true" ng-model="location.authority.rdata">
                         </md-input-container>
+                        <div class="location-spinner" ng-show="processing">
+                            <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+                        </div>
                     </div>
                 </div>
             </div>

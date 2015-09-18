@@ -1,0 +1,21 @@
+.location-details {
+    position: relative;
+}
+
+.location-details.in-process:after {
+    content: " ";
+    z-index: 10;
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.location-spinner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
