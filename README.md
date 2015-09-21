@@ -14,6 +14,7 @@ The *Console* initially gives you also info about timing.
 
 #### Hints: 
 Check JavaScript functions; Binding; Angular slowdowns
+Use the profiler to determine if the bottleneck is a angular issue or just bad JS.
 
 ```sh
 $ npm start
