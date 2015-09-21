@@ -10,6 +10,6 @@ angular.module('angularws.accordion')
             link: function(scope, element, attrs) {
 
             },
-            template: '<div />'
+            templateUrl: './partials/accordionItem.html'
         }
     });
