@@ -1,1 +1,1 @@
-angular.module('angularws', []);
+angular.module('angularws', ['ngMaterial']);
