@@ -10,4 +10,4 @@ Also, try to think of different use cases where each of these kinds of directive
 
 ### Hints
 
-- Try to break the two way binding between the parent and the directive. We saw this in challenge 1!
+- Try to break the two way binding between the parent and the child scopes.
