@@ -3,8 +3,7 @@ angular.module('location')
         $scope.domainRegex = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
         $scope.processing = false;
         $scope.location = {
-            url: '',
-            geo: {}
+            url: ''
         };
 
         function checkURL(urlToTest) {
