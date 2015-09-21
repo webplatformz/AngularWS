@@ -1,29 +1,18 @@
 {
-  "name": "AngularWS",
-  "version": "1.0.0",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:webplatformz/AngularWS.git"
-  },
-  "engines": {
-    "node": "0.12.x"
-  },
-  "scripts": {
-    "start": "node server.js",
-    "test": "karma start test/jk.config.js --reporters nyan --browsers PhantomJS",
-    "test_chrome": "karma start test/jk.config.js --reporters nyan"
-  },
-  "dependencies": {
-    "express": "^4.13.3"
-  },
-  "devDependencies": {
-    "jasmine": "^2.3.2",
-    "jasmine-core": "^2.3.4",
-    "karma": "^0.13.9",
-    "karma-chrome-launcher": "^0.2.0",
-    "karma-cli": "^0.1.0",
-    "karma-jasmine": "^0.3.6",
-    "karma-nyan-reporter": "^0.2.2",
-    "karma-phantomjs-launcher": "~0.1"
-  }
+    "name": "AngularWS",
+    "version": "1.0.0",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:webplatformz/AngularWS.git"
+    },
+    "engines": {
+        "node": "0.12.x"
+    },
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.13.3"
+    },
+    "devDependencies": {}
 }
