@@ -24,14 +24,4 @@ angular.module('angularws')
                 name: '='
             }
         };
-    })
-
-    .directive('nameInputFour', function () {
-        return {
-            restrict: 'AE',
-            templateUrl: './partials/nameInput.html',
-            scope: {
-                name: '@'
-            }
-        };
     });
