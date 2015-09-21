@@ -31,6 +31,32 @@
         }
     }]);*/
 
+var ipLocation = {
+    "as": "AS31004 Schweizerische Bundesbahnen SBB",
+    "city": "Bern 7",
+    "country": "Switzerland",
+    "countryCode": "CH",
+    "isp": "Schweizerische Bundesbahnen SBB",
+    "lat": 46.9467,
+    "lon": 7.44699,
+    "org": "Schweizerische Bundesbahnen SBB",
+    "query": "194.150.245.142",
+    "region": "",
+    "regionName": "Canton of Bern",
+    "status": "success",
+    "timezone": "Europe/Zurich",
+    "zip": ""
+};
+
+var nsServer = {
+    "name": "sbb.ch.",
+    "type": "NS",
+    "class": "IN",
+    "ttl": 11168,
+    "rdlength": 6,
+    "rdata": "ns3.sbb.ch."
+};
+
 
 angular.module('location')
     .factory('locationService', ['$q', '$http', '$timeout', function ($q, $http, $timeout) {
@@ -38,24 +64,7 @@ angular.module('location')
             getIPLocation: function (url) {
                 var deferred = $q.defer();
                 $timeout(function () {
-                    var response = {
-                        "data": {
-                            "as": "AS31004 Schweizerische Bundesbahnen SBB",
-                            "city": "Bern 7",
-                            "country": "Switzerland",
-                            "countryCode": "CH",
-                            "isp": "Schweizerische Bundesbahnen SBB",
-                            "lat": 46.9467,
-                            "lon": 7.44699,
-                            "org": "Schweizerische Bundesbahnen SBB",
-                            "query": "194.150.245.142",
-                            "region": "",
-                            "regionName": "Canton of Bern",
-                            "status": "success",
-                            "timezone": "Europe/Zurich",
-                            "zip": ""
-                        }
-                    };
+                    var response = ipLocation;
                     deferred.resolve(response);
                 }, 2000);
 
@@ -66,16 +75,7 @@ angular.module('location')
                 $timeout(function () {
                     var response = {
                         "data": {
-                            "authority": [
-                                {
-                                    "name": "sbb.ch.",
-                                    "type": "NS",
-                                    "class": "IN",
-                                    "ttl": 5928,
-                                    "rdlength": 6,
-                                    "rdata": "ns3.sbb.ch."
-                            }
-                        ]
+                            "authority": [nsServer]
                         }
                     };
                     deferred.resolve(response);
