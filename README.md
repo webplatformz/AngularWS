@@ -11,8 +11,17 @@ $ npm test
 ### Task 2
 This one is a bit more tricky. Now you've fixed the unit tests and the code seems to be working fine, but the webtest is failing! Can you see the problem?
 
+If you are not using the VM, you will need to install protractor globally first & start the selenium server:
+
 ```sh
-$ npm webtest
+$ npm install -g protractor
+$ webdriver-manager update
+$ webdriver-manager start
+```
+
+
+```sh
+$ npm run webtest
 ```
 
 
