@@ -9,9 +9,7 @@
         "node": "0.12.x"
     },
     "scripts": {
-        "start": "node server.js",
-        "test": "karma start test/jk.config.js --reporters nyan --browsers PhantomJS",
-        "test_chrome": "karma start test/jk.config.js --reporters nyan"
+        "start": "node server.js"
     },
     "dependencies": {
         "express": "^4.13.3"
