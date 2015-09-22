@@ -20,7 +20,7 @@ module.exports = function (config) {
         "app/js/app.js",
         "app/js/injection/services.js",
         "app/js/injection/controllers.js",
-        "test/**/*.js"
+        "test/injection/**/*.js"
     ],
 
 
