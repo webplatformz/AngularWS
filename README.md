@@ -15,7 +15,9 @@ $ git checkout challenge1/task
 ```
 And if you want to see our solution
 
-
+```sh
+$ git checkout challenge1/solution
+```
 This applies for all steps 1 to n.
 
 
@@ -33,7 +35,6 @@ Installing protractor:
 ```sh
 $ npm install -g protractor
 ```
-
 
 ### Windows users (not recommended)
 
